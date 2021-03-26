@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.task-box {
+  border: solid;
+  border-radius: 2rem;
+  padding: 2px;
+  margin: 1% 10%;
+  list-style-type: none;
+}

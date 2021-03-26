@@ -1,16 +1,23 @@
-import DeleteButton from './DeleteButton';
+
 
 const List = (props) => {
   const myList = props.todoTask;
   console.log(myList);
+
+  const deleteTask = props.deleteTask;
+
+  // handleSubmit = (event) => {
+  //   console.log(event.target.id)
+  // }
+
   return (
     <ul>
       {myList.map((task) => {
         return (
-          <li key={task.task}>
+          <li key={task.task} className="task-box" id={task.task} >
             <p>Task: {task.task}</p>
             <p>Do until: {task.time}</p>
-            <DeleteButton />
+            <button onClick={deleteTask} >Delete</button>
           </li>
         );
       })}

@@ -25,6 +25,19 @@ class App extends React.Component {
     });
   };
 
+  deleteTask = (taskName) => {
+    this.setState((currState) => {
+      const newArray = [ ...currState.todoTask];
+      const targetName = taskName.target.parentElement.id;
+      for (let task of newArray) {
+        if (targetName === task.task) {
+          const thisIndex = newArray.indexOf(task);
+          // do the splice
+        }
+      }
+    })
+  }
+
   render() {
     return (
       <div>
@@ -32,7 +45,7 @@ class App extends React.Component {
         <Input addToList={this.addToList} />
         <List
           todoTask={this.state.todoTask}
-          deleteTask={this.state.deleteTask}
+          deleteTask={this.deleteTask}
         />
       </div>
     );
