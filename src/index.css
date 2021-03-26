@@ -1,11 +1,15 @@
 body {
-  margin: 0;
+  /* margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+  background-image: url('./images/pexels-craig-adderley-1563356.jpg');
+  color: rgba(26, 26, 43, 0.871);
 }
 
 code {
@@ -19,4 +23,45 @@ code {
   padding: 2px;
   margin: 1% 10%;
   list-style-type: none;
+}
+
+#input-form {
+}
+
+.input-box {
+  background-color: rgb(156, 155, 155, 0.1);
+}
+
+.JDIButton {
+  background-color: rgb(62, 116, 62, 0.8);
+  border-radius: 0.5rem;
+}
+
+.deleteButton {
+  background-color: rgba(158, 72, 72, 0.8);
+  border-radius: 0.5rem;
+  color: rgb(156, 155, 155);
+}
+
+header {
+}
+#root {
+  border: solid;
+  border-radius: 2rem;
+  margin: 5% 15%;
+  background-color: rgb(156, 155, 155, 0.8);
+}
+
+.explosion {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pop 1s reverse forwards;
 }

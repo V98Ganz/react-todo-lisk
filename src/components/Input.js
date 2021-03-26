@@ -20,10 +20,11 @@ class Input extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id='input-form' onSubmit={this.handleSubmit}>
         <label>
           Task:{' '}
           <input
+            className='input-box'
             type='text'
             id='task'
             onChange={this.handleChange}
@@ -33,13 +34,14 @@ class Input extends Component {
         <label>
           Do until{' '}
           <input
+            className='input-box'
             type='date'
             id='time'
             onChange={this.handleChange}
             value={this.state.time}
           />
         </label>
-        <button>Just Do It!</button>
+        <button className='JDIButton'>Just Do It!</button>
       </form>
     );
   }

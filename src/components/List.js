@@ -1,5 +1,3 @@
-
-
 const List = (props) => {
   const myList = props.todoTask;
   console.log(myList);
@@ -14,10 +12,12 @@ const List = (props) => {
     <ul>
       {myList.map((task) => {
         return (
-          <li key={task.task} className="task-box" id={task.task} >
+          <li key={task.task} className='task-box' id={task.task}>
             <p>Task: {task.task}</p>
             <p>Do until: {task.time}</p>
-            <button onClick={deleteTask} >Delete</button>
+            <button className='deleteButton' onClick={deleteTask}>
+              Delete
+            </button>
           </li>
         );
       })}
